@@ -1,0 +1,86 @@
+// // Function to extract the domain name from a URL
+// function getDomainName(url) {
+//     try {
+//         const domain = new URL(url).hostname;
+//         return domain.replace(/^www\./, ''); // Remove "www."
+//     } catch (error) {
+//         console.error('Invalid URL:', error);
+//         return 'Unknown Website';
+//     }
+// }
+
+// // Get the current active tab's URL
+// chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+//     if (tabs.length > 0) {
+//         const currentTab = tabs[0];
+//         const websiteName = getDomainName(currentTab.url);
+//         // Update the DOM with the website name
+//         document.getElementById('website-name').textContent = websiteName;
+//     } else {
+//         document.getElementById('website-name').textContent = 'No active tab found.';
+//     }
+
+// // Add PDF upload functionality
+// const uploadButton = document.getElementById("uploadButton");
+// const fileInput = document.getElementById("fileInput");
+// const pdfTitle = document.getElementById("pdfTitle");
+
+// uploadButton.addEventListener("click", () => {
+//     fileInput.click();
+// });
+
+// fileInput.addEventListener("change", async (event) => {
+//     const file = event.target.files[0];
+//     if (file && file.type === "application/pdf") {
+//         try {
+//             const arrayBuffer = await file.arrayBuffer();
+//             const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+
+//             // Extract the title metadata
+//             const title = pdfDoc.getTitle() || "No Title Found";
+
+//             // Display the title
+//             pdfTitle.textContent = `Title: ${title}`;
+//         } catch (error) {
+//             console.error("Error reading PDF file:", error);
+//             pdfTitle.textContent = "Error reading PDF title.";
+//         }
+//     } else {
+//         pdfTitle.textContent = "Please upload a valid PDF file.";
+//     }
+// });
+// });
+
+
+//--------------------------------------------------------------------
+// document.addEventListener("DOMContentLoaded", () => {
+//     const uploadButton = document.getElementById("uploadButton");
+//     const fileInput = document.getElementById("fileInput");
+//     const pdfTitle = document.getElementById("pdfTitle");
+
+//     if (uploadButton && fileInput && pdfTitle) {
+//         uploadButton.addEventListener("click", () => {
+//             fileInput.click();
+//         });
+
+//         fileInput.addEventListener("change", async (event) => {
+//             const file = event.target.files[0];
+//             if (file && file.type === "application/pdf") {
+//                 try {
+//                     const arrayBuffer = await file.arrayBuffer();
+//                     const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer);
+
+//                     const title = pdfDoc.getTitle() || "No Title Found";
+//                     pdfTitle.textContent = `Title: ${title}`;
+//                 } catch (error) {
+//                     console.error("Error reading PDF file:", error);
+//                     pdfTitle.textContent = "Error reading PDF title.";
+//                 }
+//             } else {
+//                 pdfTitle.textContent = "Please upload a valid PDF file.";
+//             }
+//         });
+//     } else {
+//         console.error("One or more DOM elements are missing.");
+//     }
+// });

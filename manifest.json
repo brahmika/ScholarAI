@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "ScholarAI",
+    "version": "1.0",
+    "description": "Summarises research papers and gain knowledge while asking your doubts to ScholarAI",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "/images/nerd-glasses16x16.png"
+    },
+    "icons": {
+        "16": "images/nerd-glasses16x16.png",
+        "24": "images/nerd-glasses24x24.png",
+        "32": "images/nerd-glasses32x32.png",
+        "64": "images/nerd-glasses64x64.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "permissions": [
+        "storage",
+        "activeTab"
+    ]
+}   

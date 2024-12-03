@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ScholarAI</title>
+        <link rel="stylesheet" href="bulma.min.css"/>
+    </head>
+
+<body>
+    <div class="container m-1">
+        <img src="https://cdn-icons-png.flaticon.com/256/12605/12605370.png" alt="Logo" style="display: block; margin: 20px auto; width: 100px;">
+    </div>
+
+    <div class="container m-1">
+        <button id="uploadButton" class="button is-success" style="display: block; margin: 0 auto; width: 200px;">Upload PDF</button>
+        <input id="fileInput" type="file" accept="application/pdf" style="display: none;">
+        
+    </div>  
+    <div class="container m-1">
+        <p id="pdfTitle" class="has-text-centered">No PDF uploaded yet</p>
+    </div>
+    <div class="container m-1">
+        <p id="website-name" class="has-text-centered">Loading...</p>
+    </div>
+    <div id="summary" class="box mt-3" style="display: none;"></div>
+
+    <script src="popup.js"></script>
+
+
+</body>
